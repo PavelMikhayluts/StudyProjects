@@ -2,13 +2,15 @@ package myStringBuilder;
 
 public abstract class Command {
 
-    public MyStringBuilder myStringBuilder;
+    public Command(MyStringBuilder myStringBuilder, String deletedString, int start){}
 
-     Command(MyStringBuilder myStringBuilder){
-         this.myStringBuilder=myStringBuilder;
-     }
+    public Command(MyStringBuilder myStringBuilder, int beforeLength) {}
 
-     public abstract void undo();
+    public Command(MyStringBuilder myStringBuilder, int beforeLength, int currentLength) {}
 
+    public Command(MyStringBuilder myStringBuilder, String deletedString, int start, int newEnd) {}
 
+    public Command(MyStringBuilder myStringBuilder) {}
+
+    public abstract void undo();
 }

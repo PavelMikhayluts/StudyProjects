@@ -12,7 +12,6 @@ import java.util.Stack;
         public Command pop() {
             return history.pop();
         }
-
         public boolean isEmpty() { return history.isEmpty(); }
     }
 
