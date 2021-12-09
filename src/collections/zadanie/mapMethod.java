@@ -14,7 +14,6 @@ public class mapMethod {
     public static void main(String[] args) {
         // Создаем HashMap и заполняем ее
         Map<String, Employee> staff = new HashMap<>();
-
         Map<Employee, List<String>> invertedStaff = new HashMap<>();//
 
         staff.put("144-25-5464", new Employee("Amy Lee"));
@@ -28,7 +27,6 @@ public class mapMethod {
             if (invertedStaff.containsKey(item.getValue())) {
                 List<String> list = invertedStaff.get(item.getValue());
                 list.add(item.getKey());
-               // invertedStaff.replace(item.getValue(), list);
             } else {
                 List<String> list = new ArrayList<>();
                 list.add(item.getKey());
